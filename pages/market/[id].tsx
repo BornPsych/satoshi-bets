@@ -105,7 +105,7 @@ const Details = () => {
               <div className="flex flex-row">
                 <div className="h-w-15 pr-4">
                   <Img
-                    src={`https://ipfs.infura.io/ipfs/${market?.imageHash}`}
+                    src={`/Bitcoin.png`}
                     className="rounded-full"
                     width={55}
                     height={55}
@@ -139,7 +139,7 @@ const Details = () => {
                   </span>
                   <span className="text-base font-semibold text-black whitespace-nowrap">
                     {market?.totalAmount.toString() ?? "0"}{" "}
-                    POLY
+                    cBTC
                   </span>
                 </div>
               </div>
@@ -198,7 +198,7 @@ const Details = () => {
                         autoComplete="off"
                       />
                       <span className="whitespace-nowrap text-sm font-semibold">
-                        POLY |{" "}
+                        cBTC |{" "}
                       </span>
                       <span className="text-sm font-semibold text-blue-700 mx-2 underline cursor-pointer">
                         Max

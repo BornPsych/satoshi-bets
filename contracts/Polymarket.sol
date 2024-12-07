@@ -22,9 +22,9 @@ contract Polymarket {
         string creatorImageHash;
         AmountAdded[] yesCount;
         AmountAdded[] noCount;
-        uint256 totalAmount;        // Now a fixed-point decimal
-        uint256 totalYesAmount;     // Now a fixed-point decimal
-        uint256 totalNoAmount;      // Now a fixed-point decimal
+        uint256 totalAmount;        
+        uint256 totalYesAmount;    
+        uint256 totalNoAmount;     
         bool eventCompleted;
         string description;
         string resolverUrl;
@@ -32,7 +32,7 @@ contract Polymarket {
 
     struct AmountAdded {
         address user;
-        uint256 amount;  // Now a fixed-point decimal
+        uint256 amount; 
         uint256 timestamp;
     }
 

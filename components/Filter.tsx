@@ -19,7 +19,7 @@ export const Filter: React.FC<Props> = ({
     <>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-700 bg-black rounded-md bg-opacity-10 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="appearance-none w-full flex flex-row md:w-48 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500">
             {category}: {activeItem}
             <ChevronDownIcon
               className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
@@ -43,9 +43,8 @@ export const Filter: React.FC<Props> = ({
                   {({ active }) => {
                     return (
                       <button
-                        className={`${
-                          activeItem === item && "bg-gray-200"
-                        } font-medium group flex rounded-md items-center w-full px-3 py-2 text-sm text-gray-900 hover:bg-gray-200 my-1`}
+                        className={`${activeItem === item && "bg-gray-200"
+                          } font-medium group flex rounded-md items-center w-full px-3 py-2 text-sm text-gray-900 hover:bg-gray-200 my-1`}
                       >
                         {item}
                       </button>

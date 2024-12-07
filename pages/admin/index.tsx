@@ -21,9 +21,9 @@ const Admin = () => {
   >(Date());
 
   const uploadImage = async (e: any) => {
-    const file = e.target.files[0];
-    const added = await client.add(file);
-    setImageHash(added.path);
+    // const file = e.target.files[0];
+    // const added = await client.add(file);
+    // setImageHash(added.path);
   };
 
   useEffect(() => {

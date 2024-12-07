@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { useData } from "../contexts/DataContext";
+import { Bitcoin, Menu, X } from 'lucide-react'
 
 function Navbar() {
   const router = useRouter();
@@ -9,12 +10,15 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-full h-16 mt-auto max-w-5xl">
+      <nav className="w-full h-16 mt-auto pt-8 px-6">
         <div className="flex flex-row justify-between items-center h-full">
           <Link href="/" passHref>
-            <span className="font-semibold text-xl cursor-pointer">
-              Polymarket
-            </span>
+            <div className="flex-shrink-0 flex items-center">
+              <Bitcoin className="h-8 w-8 text-yellow-500" />
+              <span className="ml-2 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-700">
+                SATOSHI BETS
+              </span>
+            </div>
           </Link>
           {!router.asPath.includes("/market") &&
             !router.asPath.includes("/admin") && (
@@ -32,14 +36,14 @@ function Navbar() {
               </div>
             )}
           {account ? (
-            <div className="bg-green-500 px-6 py-2 rounded-md cursor-pointer">
-              <span className="text-lg text-white">
+            <div className="bg-yellow-600 px-6 py-2 rounded-md cursor-pointer">
+              <span className="text-2lg font-extrabold text-white">
                 {account.substr(0, 10)}...
               </span>
             </div>
           ) : (
             <div
-              className="bg-green-500 px-6 py-2 rounded-md cursor-pointer"
+              className="bg-yellow-500 px-6 py-2 rounded-md cursor-pointer"
               onClick={() => {
                 loadWeb3();
               }}
@@ -67,11 +71,10 @@ const TabButton = ({
   return (
     <Link href={url} passHref>
       <div
-        className={`h-full px-4 flex items-center border-b-2 font-semibold hover:border-blue-700 hover:text-blue-700 cursor-pointer ${
-          isActive
-            ? "border-blue-700 text-blue-700 text-lg font-semibold"
-            : "border-white text-gray-400 text-lg"
-        }`}
+        className={`h-full px-4 flex items-center border-b-2 font-semibold hover:border-yellow-700 hover:text-yellow-700 cursor-pointer ${isActive
+          ? "border-yellow-700 text-yellow-700 text-lg font-semibold"
+          : "border-white text-gray-400 text-lg"
+          }`}
       >
         <span>{title}</span>
       </div>

@@ -24,7 +24,7 @@ export const AdminMarketCard: React.FC<Props> = ({
         <div className="flex flex-row space-x-5 pb-4">
           <div className="h-w-15">
             <Img
-              src={`https://ipfs.infura.io/ipfs/${imageHash}`}
+              src={`/Bitcoin.png`}
               className="rounded-full"
               width={55}
               height={55}
@@ -39,7 +39,7 @@ export const AdminMarketCard: React.FC<Props> = ({
             </span>
             <span className="text-base">
               {parseFloat(Web3.utils.fromWei(totalAmount, "ether")).toFixed(2)}{" "}
-              POLY
+              cBTC
             </span>
           </div>
           <div className="flex flex-col space-y-1">

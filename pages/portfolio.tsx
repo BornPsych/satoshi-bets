@@ -121,7 +121,7 @@ const Portfolio = () => {
             <div className="flex flex-col items-center">
               <h1 className="text-white opacity-50 text-lg">Portfolio Value</h1>
               <h1 className="text-white text-4xl font-bold">
-                {Web3.utils.fromWei(portfolioValue.toString())} POLY
+                {portfolioValue.toString()} cBTC
               </h1>
             </div>
           </div>

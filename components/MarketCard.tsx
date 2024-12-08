@@ -13,11 +13,11 @@ export const MarketCard: React.FC<MarketProps> = ({
   imageHash,
 }) => {
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg backdrop-blur-sm hover:bg-gray-800 w-96">
+    <div className="bg-gray-800 border border-gray-700 rounded-lg backdrop-blur-sm hover:bg-gray-900 w-96">
       <Link href={`/market/${id}`} passHref>
-        <div className="flex flex-col border border-gray-300 rounded-lg p-3 hover:border-blue-700 cursor-pointer">
-          <div className="flex flex-row space-x-5 pb-8">
-            <div className="w-12  h-w-12">
+        <div className="flex flex-col rounded-lg p-3 cursor-pointer">
+          <div className="flex flex-row gap-6 pb-8">
+            <div className="w-12 h-12">
               <Img
                 src={`/Bitcoin.png`}
                 className="rounded-full"

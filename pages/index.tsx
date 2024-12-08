@@ -137,7 +137,7 @@ export default function Home() {
           </div>
 
 
-          <div className="mt-12 flex flex-grow gap-8 mb-16">
+          <div className="mt-12 flex flex-wrap gap-8 mb-16">
             {markets.map((market) => {
               return (
                 <MarketCard

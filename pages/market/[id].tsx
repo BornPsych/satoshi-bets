@@ -40,7 +40,7 @@ const Details = () => {
       id: data.id,
       title: data.question,
       imageHash: data.creatorImageHash,
-      totalAmount: parseInt(data.totalAmount) / 10e18,
+      totalAmount: parseInt(data.totalAmount) / 10e17,
       totalYes: parseInt(data.totalYesAmount) / 10e18,
       totalNo: parseInt(data.totalNoAmount) / 10e18,
       description: data.description,
@@ -52,7 +52,7 @@ const Details = () => {
 
   const handleTrade = async () => {
     const bal = String(tokenBalance / 10e10);
-    const inputParam = String(Number(input) * 100000000);
+    const inputParam = String(Number(input) * 10000000000);
     setButton("Please wait");
     if (inputParam && selected === "YES") {
       if (inputParam < bal) {
@@ -164,7 +164,7 @@ const Details = () => {
                       {!market?.totalAmount
                         ? `0`
                         : (
-                          (market?.totalYes * 100) /
+                          (market?.totalYes * 1000) /
                           market?.totalAmount
                         ).toFixed(2)}
                       %
@@ -180,7 +180,7 @@ const Details = () => {
                       {!market?.totalAmount
                         ? `0`
                         : (
-                          (market?.totalNo * 100) /
+                          (market?.totalNo * 1000) /
                           market?.totalAmount
                         ).toFixed(2)}
                       %

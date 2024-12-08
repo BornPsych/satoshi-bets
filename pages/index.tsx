@@ -5,6 +5,7 @@ import { MarketCard } from "../components/MarketCard";
 import Navbar from "../components/Navbar";
 import { useData } from "../contexts/DataContext";
 import styles from "../styles/Home.module.css";
+import { BitcoinIcon } from "lucide-react";
 
 export interface MarketProps {
   id: string;
@@ -107,8 +108,36 @@ export default function Home() {
           <div>
 
           </div>
-          <span className="font-bold my-3 text-lg text-white">Market</span>
-          <div className="flex flex-wrap overflow-hidden">
+
+          <div className="col-span-full bg-gradient-to-br from-gray-800/50 via-gray-900/50 to-black/50 border border-gray-700 rounded-lg p-6 backdrop-blur-xl mt-12">
+            <div className="flex items-center gap-2 mb-4">
+              <BitcoinIcon className="w-6 h-6 text-yellow-500" />
+              <h2 className="text-xl font-bold text-white">Bitcoin Prediction</h2>
+            </div>
+            <p className="text-gray-400 mb-4 text-4xl">
+              Are you Satoshi Nakamoto?
+            </p>
+            <div className="flex flex-col gap-4">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">Current Odds</span>
+                <div className="flex gap-4">
+                  <span className="text-green-500">Yes: 50%</span>
+                  <span className="text-red-500">Yes: 50%</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mt-2">
+                <button className="py-2 px-4 bg-green-500 text-lg hover:bg-green-500 text-white border border-green-500 rounded-md transition-colors">
+                  Bet Yes
+                </button>
+                <button className="py-2 px-4 bg-red-500 text-lg hover:bg-red-500 text-white border border-red-500 rounded-md transition-colors">
+                  Bet Yes
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="mt-12">
             {markets.map((market) => {
               return (
                 <MarketCard

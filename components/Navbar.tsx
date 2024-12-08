@@ -22,7 +22,7 @@ function Navbar() {
           </Link>
           {!router.asPath.includes("/market") &&
             !router.asPath.includes("/admin") && (
-              <div className="flex flex-row items-center justify-center h-full">
+              <div className="flex flex-row items-center justify-center h-full gap-4">
                 <TabButton
                   title="Market"
                   isActive={router.asPath === "/"}
@@ -71,7 +71,7 @@ const TabButton = ({
   return (
     <Link href={url} passHref>
       <div
-        className={`h-full px-4 flex items-center border-b-2 font-semibold hover:border-yellow-700 hover:text-yellow-700 cursor-pointer ${isActive
+        className={`h-full px-4 flex items-center border-2 font-semibold hover:border-yellow-700 hover:text-yellow-700 cursor-pointer ${isActive
           ? "border-yellow-700 text-yellow-700 text-lg font-semibold"
           : "border-white text-gray-400 text-lg"
           }`}

@@ -34,9 +34,9 @@ export const PortfolioMarketCard: React.FC<MarketProps> = ({
   var now = moment(new Date()); //todays date
   var daysLeft = moment.duration(endingOn.diff(now)).asDays().toFixed(0);
   return (
-    <div className="w-full overflow-hidden my-2">
-      <div className="flex flex-col border border-gray-300 rounded-lg p-5 hover:border-blue-700 cursor-pointer">
-        <div className="flex flex-row space-x-5 pb-4">
+    <div className="w-full overflow-hidden my-2 text-white px-16 py-2">
+      <div className="flex flex-row gap-8 border border-gray-300 rounded-lg p-5 hover:border-blue-700 cursor-pointer">
+        <div className="flex flex-row  items-center space-x-5">
           <div className="h-w-15">
             <Img
               src={`/Bitcoin.png`}
@@ -47,7 +47,7 @@ export const PortfolioMarketCard: React.FC<MarketProps> = ({
           </div>
           <span className="text-lg font-semibold">{title}</span>
         </div>
-        <div className="flex flex-row flex-nowrap justify-between items-center">
+        <div className="flex flex-row flex-nowrap w-full justify-between items-center">
           <div className="flex flex-col space-y-1">
             <span className="text-sm text-gray-500 font-light">Outcome</span>
             <span className="text-base">{userYes ? "YES" : "NO"}</span>
@@ -57,7 +57,7 @@ export const PortfolioMarketCard: React.FC<MarketProps> = ({
               Amount Added
             </span>
             <span className="text-base">
-              {Web3.utils.fromWei(userYes ?? userNo)} POLY
+              {Web3.utils.fromWei(userYes ?? userNo)} cBTC
             </span>
           </div>
           <div className="flex flex-col space-y-1">
